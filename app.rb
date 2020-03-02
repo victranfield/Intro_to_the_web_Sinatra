@@ -1,8 +1,17 @@
 require 'sinatra'
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
+  @last_name = ["Cameron", "Putin", "Brown"]
+  @color = ["blue", "pink", "yellow"]
   erb(:index)
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  @last_name = params[:last_name]
+  @color = params[:color]
+  erb :index
 end
 
 get '/' do
