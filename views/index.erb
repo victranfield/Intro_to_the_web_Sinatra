@@ -1,6 +1,11 @@
+
+<% if @name %>
 <h1>My name is <%= @name %></h1>
-<h2>My last name is <%= @last_name %></h2>
-<h3>My color is <%= @color %></h3>
+<% end %>
+<form action="/named-cat" method="post">
+  <input type="text" name="name">
+  <input type="submit" value="Submit">
+</form>
 <div style='border: 3px dashed red'>
-<img src='http://bit.ly/1eze8aE'>
+  <img src='http://bit.ly/1eze8aE'>
 </div>
